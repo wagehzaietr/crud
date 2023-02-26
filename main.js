@@ -13,15 +13,18 @@ let temp
 
 function getTotal(){
     if(price.value != ""){
-        let result = +(+price.value + +taxes.value + +ads.value) 
-        - +discount.value
-        total.innerHTML = result
+        let totalWithoutDiscount = +price.value + +taxes.value + +ads.value;
+        let discountAmount = +discount.value;
+        let totalWithDiscount = totalWithoutDiscount - discountAmount;
+        let formattedTotal = '$' + totalWithDiscount.toFixed(2);
+        let calculationFormula = `${price.value} + ${ads.value} + ${taxes.value} - ${discount.value} = ${formattedTotal}`;
+        total.innerHTML = calculationFormula;
         total.style.background = '#00FF00';
-    }else{
+    } else {
         total.innerHTML = '';
         total.style.background = '#a00d02';
-        
     }
+
 }
 let dataPro
     if (localStorage.product != null){
