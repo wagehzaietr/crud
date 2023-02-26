@@ -112,8 +112,8 @@ table th{
 }
 
 table{
-    width: 100%;
-    grid-gap: 15px;
+    width: 93%;
+    grid-gap: 10px;
     text-align: center;
     padding-top: 5px;
     margin: 10px 0;
@@ -129,6 +129,7 @@ footer{
     align-items: center;
     padding-top: 25px;
     position: relative;
+    padding-left:50px;
 }
 
 footer .container{
@@ -139,6 +140,7 @@ footer .container{
     letter-spacing: 5px;
     font-weight: 700;
     padding-top: 25px;
+    text-align:center;
 
 }
 
