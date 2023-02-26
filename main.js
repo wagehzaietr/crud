@@ -34,6 +34,7 @@ submit.onclick = function(){
     let newPro = {
         title:title.value.toLowerCase(),
         price:price.value,
+        taxes:taxes.value,
         ads:ads.value,
         discount:discount.value,
         total:total.innerHTML,
