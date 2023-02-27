@@ -7,10 +7,10 @@
 }
 
 :root{
-    --color-1: #15181a;
-    --color-2: #EE9747;
-    --color-3: #D3FBD8;
-    --color-4: #ffffff;
+    --color-1: #E2F1FF;
+    --color-2: #008F87;
+    --color-3: #D8A31A;
+    --color-4: #93ABDE;
 }
 
 .container{
@@ -20,9 +20,19 @@
     margin-top: 10px;
     background-color: var(--color-2);
     display: grid;
+    flex-wrap: wrap;
     gap: 3px;
     border-radius: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
 
+}
+
+span , h2{
+   color: #D8A31A;
+   font-weight: bold;
 }
 
 body{
@@ -53,13 +63,13 @@ body{
 }
 
 input{
-    padding: 5px;
+    padding: 2px 2px;
     margin: 2px 1px;
     outline: none;
-    width: calc(90% + 10px);
+    width: calc(90% + 5px);
     border: none;
     background: var(--color-1);
-    color: var(--color-2);
+    color: var(--color-5);
     height: 20px;
     transition: .5s;
     height: 27px;
@@ -68,14 +78,21 @@ input{
 button{
     outline: none;
     background-color: var(--color-3);
-    width: calc(90% + 10px);
+    width: calc(90% + 5px);
     font-size: 13px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.39);
     transition: .6s;
-    color: var(--color-1);
-    padding: 8px;
+    color: var(--color-5);
+    display: grid;
+    padding: 5px;
+    gap: 1px;
+    margin-top: 1px;
     font-weight: 700;
+    border: none;
+    cursor: pointer;
 }
+
+
 
 button:hover{
     background-color: var(--color-4);
@@ -90,7 +107,7 @@ input:focus{
 
 #total{
     background-color: red;
-    color: var(--color-4);
+    color: var(--color-1);
     font-size: 13px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.363);
     border-radius: 1px;
@@ -109,11 +126,22 @@ table th{
     color: var(--color-1);
     gap: 10px;
     font-weight: 700;
+    position: relative;
+    right: 15px;
+}
+
+
+#tbody-el{
+    position: relative;
+    top: 0;
+    right: 16px;
+    font-size: 12px;
+
 }
 
 table{
-    width: 93%;
-    grid-gap: 10px;
+
+    grid-gap: 15px;
     text-align: center;
     padding-top: 5px;
     margin: 10px 0;
@@ -127,9 +155,9 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 25px;
+    padding-top: 20px;
     position: relative;
-    padding-left:50px;
+    padding-left: 70px;
 }
 
 footer .container{
@@ -140,7 +168,6 @@ footer .container{
     letter-spacing: 5px;
     font-weight: 700;
     padding-top: 25px;
-    text-align:center;
 
 }
 
@@ -154,7 +181,7 @@ footer .container{
 footer .container i{
     font-weight: 400;
     transition: .7s;
-    color: var(--color-3);
+    color: var(--color-1);
     
 }
 
