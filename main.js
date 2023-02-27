@@ -1,7 +1,6 @@
 let title = document.getElementById("title")
 let price = document.getElementById("price")
 let taxes = document.getElementById("taxes")
-let ads = document.getElementById("ads")
 let discount = document.getElementById("discount")
 let total = document.getElementById("total")
 let count = document.getElementById("count")
@@ -13,7 +12,7 @@ let temp
 
 function getTotal(){
     if(price.value != ""){
-        let result = (50*19/100) + (+price.value + +taxes.value + +ads.value) 
+        let result = (50*19/100) + (+price.value + +taxes.value) 
          - +discount.value 
         total.innerHTML = result
         total.style.background = '#00FF00';
@@ -35,7 +34,6 @@ submit.onclick = function(){
         title:title.value.toLowerCase(),
         price:price.value,
         taxes:taxes.value,
-        ads:ads.value,
         discount:discount.value,
         total:total.innerHTML,
         count:count.value,
@@ -71,7 +69,6 @@ function cleardata(){
     title.value = ''
     price.value = ''
     taxes.value = ''
-    ads.value = ''
     discount.value = ''
     total.innerHTML = ''
     count.value = ''
@@ -91,7 +88,6 @@ function showData(){
             <td>${dataPro[i].title}</td>
             <td>${dataPro[i].price + " "}</td>
             <td>${dataPro[i].taxes + " "}</td>
-            <td>${dataPro[i].ads}</td>
             <td>${dataPro[i].discount}</td>
             <td>${dataPro[i].total}</td>
             <td>${dataPro[i].category}</td>
@@ -140,7 +136,6 @@ function updateData(i){
     title.value = dataPro[i].title
     price.value = dataPro[i].price
     taxes.value = dataPro[i].taxes
-    ads.value = dataPro[i].ads
     discount.value = dataPro[i].discount
     category.value = dataPro[i].category
     getTotal()
@@ -190,7 +185,6 @@ function searchData(value){
                     <td>${dataPro[i].title}</td>
                     <td>${dataPro[i].price}</td>
                     <td>${dataPro[i].taxes}</td>
-                    <td>${dataPro[i].ads}</td>
                     <td>${dataPro[i].discount}</td>
                     <td>${dataPro[i].total}</td>
                     <td>${dataPro[i].category}</td>
@@ -210,7 +204,6 @@ function searchData(value){
                         <td>${dataPro[i].title}</td>
                         <td>${dataPro[i].price}</td>
                         <td>${dataPro[i].taxes}</td>
-                        <td>${dataPro[i].ads}</td>
                         <td>${dataPro[i].discount}</td>
                         <td>${dataPro[i].total}</td>
                         <td>${dataPro[i].category}</td>
