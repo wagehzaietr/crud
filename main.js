@@ -13,18 +13,15 @@ let temp
 
 function getTotal(){
     if(price.value != ""){
-        let totalWithoutDiscount = +price.value + +taxes.value + +ads.value;
-        let discountAmount = +discount.value;
-        let totalWithDiscount = totalWithoutDiscount - discountAmount;
-        let formattedTotal = '$' + totalWithDiscount.toFixed(2);
-        let calculationFormula = `${price.value} + ${ads.value} + ${taxes.value} - ${discount.value} = ${formattedTotal}`;
-        total.innerHTML = calculationFormula;
+        let result = (50*19/100) + (+price.value + +taxes.value + +ads.value) 
+         - +discount.value 
+        total.innerHTML = result
         total.style.background = '#00FF00';
-    } else {
+    }else{
         total.innerHTML = '';
         total.style.background = '#a00d02';
+        
     }
-
 }
 let dataPro
     if (localStorage.product != null){
@@ -92,8 +89,8 @@ function showData(){
         <tr>
             <td>${[i+1] + ":"}</td>
             <td>${dataPro[i].title}</td>
-            <td>${dataPro[i].price}</td>
-            <td>${dataPro[i].taxes}</td>
+            <td>${dataPro[i].price + " "}</td>
+            <td>${dataPro[i].taxes + " "}</td>
             <td>${dataPro[i].ads}</td>
             <td>${dataPro[i].discount}</td>
             <td>${dataPro[i].total}</td>
