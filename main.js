@@ -8,11 +8,13 @@ let category = document.getElementById("category")
 let submit = document.getElementById("submit")
 let mood = 'create'
 let temp
+let x = 100
 
 
 function getTotal(){
     if(price.value != ""){
-        let result =  + (+price.value + +taxes.value) 
+        let calculate = +(+price.value + (taxes.value * +price.value / x))
+        let result = calculate - (+discount.value * calculate / x )
          - +discount.value 
         total.innerHTML = result
         total.style.background = '#00FF00';
