@@ -12,7 +12,7 @@ let temp
 
 function getTotal(){
     if(price.value != ""){
-        let result = (50*19/100) + (+price.value + +taxes.value) 
+        let result = (+price.value + +taxes.value) 
          - +discount.value 
         total.innerHTML = result
         total.style.background = '#00FF00';
