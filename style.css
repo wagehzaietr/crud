@@ -126,7 +126,7 @@ input:focus{
     color: var(--color-1);
     font-size: 13px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.363);
-    border-radius: 1px;
+    border-radius: 5px 0 5px 5px;
     padding: 2px;
 }
 
