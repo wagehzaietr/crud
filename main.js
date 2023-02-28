@@ -12,7 +12,7 @@ let temp
 
 function getTotal(){
     if(price.value != ""){
-        let result = (+price.value + +taxes.value) 
+        let result =  + (+price.value + +taxes.value) 
          - +discount.value 
         total.innerHTML = result
         total.style.background = '#00FF00';
@@ -92,7 +92,7 @@ function showData(){
             <td>${dataPro[i].total}</td>
             <td>${dataPro[i].category}</td>
             <td><button onclick="updateData(${i})" id="update">update</button></td>
-            <td><button onclick="deletedata(${i})" id="deleter">delete</button></td>
+            <td><button onclick="deletedata(${i})" id="delete">delete</button></td>
     </tr>
     `
     }
@@ -102,7 +102,8 @@ function showData(){
     if (dataPro.length > 0) {
         btnDelete.innerHTML = `<button>Delete All(${dataPro.length})</button>`;
     } else {
-        btnDelete.innerHTML = ""; // set to empty string to hide the button
+        btnDelete.innerHTML = "";
+
     }
 }
 
